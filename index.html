@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Shop</title>
+    <link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2>Fashion Shop</h2>
+
+        <ul id="menu">
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="katalog.html">Katalog</a></li>
+            <li><a href="kolekcija.html">Kolekcije</a></li>
+        </ul>
+
+        <div class="right">
+            <span id="cart-count">0</span> 🛒
+            <div id="menu-btn">☰</div>
+        </div>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Nova kolekcija 2026</h1>
+    <p>Stil koji se pamti</p>
+</section>
+
+<section id="products">
+    <h2>Proizvodi</h2>
+    <input type="text" placeholder="Pretraži artikle...">
+
+    <div id="product-list">
+        <div class="card">
+            <img src="slike/Kravata.jpg" alt="Kravata">
+            <h3>Kravata</h3>
+            <p>2000 RSD</p>
+            <button>Dodaj u korpu</button>
+        </div>
+        <div class="card">
+            <img src="slike/Prsluk.jpg" alt="Prsluk">
+            <h3>Prsluk</h3>
+            <p>5000 RSD</p>
+            <button>Dodaj u korpu</button>
+        </div>
+        <div class="card">
+            <img src="slike/haljina.jpg" alt="Haljina">
+            <h3>Haljina</h3>
+            <p>3000 RSD</p>
+            <button>Dodaj u korpu</button>
+        </div>
+        <div class="card">
+            <img src="slike/Pantalone1.jpg" alt="Pantalone">
+            <h3>Pantalone</h3>
+            <p>4000 RSD</p>
+            <button>Dodaj u korpu</button>
+        </div>
+
+        <div class="card">
+            <img src="slike/Odelo1.jpg" alt="Odelo">
+            <h3>Odelo</h3>
+            <p>12000 RSD</p>
+            <button>Dodaj u korpu</button>
+        </div>
+        <div class="card">
+            <img src="slike/kosulja.jpg" alt="Kosulja">
+            <h3>Košulja</h3>
+            <p>3500 RSD</p>
+            <button>Dodaj u korpu</button>
+        </div>
+        <div class="card">
+            <img src="slike/kaput.jpg" alt="Kaput">
+            <h3>Kaput</h3>
+            <p>9500 RSD</p>
+            <button>Dodaj u korpu</button>
+        </div>
+        <div class="card">
+            <img src="slike/Cipele.jpg" alt="Cipele">
+            <h3>Cipele</h3>
+            <p>7000 RSD</p>
+            <button>Dodaj u korpu</button>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Ime">
+        <input type="email" id="email" placeholder="Email">
+        <textarea id="message" placeholder="Poruka"></textarea>
+        <button type="submit">Pošalji</button>
+    </form>
+    <p id="formMsg"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

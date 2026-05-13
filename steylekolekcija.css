@@ -1,0 +1,71 @@
+/* KOLEKCIJE GRID */
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+/* KARTICE */
+.collection-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+/* HOVER EFEKAT */
+.collection-card:hover {
+    transform: translateY(-8px);
+}
+
+/* SLIKE */
+.collection-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* TEKST */
+.collection-card h3 {
+    margin: 10px 0 5px;
+}
+
+.collection-card p {
+    padding: 0 10px 15px;
+    color: #555;
+}
+/* HEADER CENTAR */
+.header-center {
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* NASLOV */
+.header-center h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* DUGMAD */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-buttons a {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-buttons a:hover {
+    background: #444;
+}

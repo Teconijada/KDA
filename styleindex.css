@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    /* Gradijent: tamnija koža (levo) ka svetlijoj (desno) */
+    background: linear-gradient(135deg, #4b3621 0%, #8b5a2b 50%, #d2b48c 100%);
+    background-attachment: fixed; /* Da pozadina stoji dok skroluješ */
+    color: white;
+}
+
+/* NAV */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    
+    /* Elegantna krem bela navigacija */
+    background: #ffffff; 
+    border-bottom: 1px solid #e8e0d5;
+    color: #2c2c2c;
+}
+
+/* LOGO */
+.navbar h2 {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+}
+
+/* MENI */
+#menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#menu li a {
+    color: #444;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#menu li a:hover {
+    color: #c5a059; /* Zlatno-bež detalj na hover */
+}
+
+/* DESNA STRANA */
+.right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    color: #2c2c2c;
+}
+
+#menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+/* HERO SEKCIJA - Ovde je glavna promena u bež boju */
+.hero {
+    height: 60vh;
+    /* Ako nemaš sliku, boja #f2e8df će dominirati, ako imaš, biće preko nje */
+    background: 
+        linear-gradient(rgba(242, 232, 223, 0.7), rgba(242, 232, 223, 0.7)), 
+        url("slike/hero.jpg");
+    
+    background-color: #f2e8df; /* Topla bež pozadina */
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #2c2c2c; /* Tamni tekst na svetloj pozadini */
+}
+
+/* NASLOV */
+.hero h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+    /* Uklonjena jaka senka za čistiji izgled */
+    text-shadow: none;
+}
+
+.hero h1 {
+    animation: fade 1.5s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* PODNASLOV */
+.hero p {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #555;
+}
+
+/* PRODUCTS */
+#products {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Dodaj ovo: */
+    min-height: 100vh; 
+}
+/* Naslov "Proizvodi" i Input za pretragu */
+#products h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+#products input {
+    width: 300px;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 40px; /* Razmak između pretrage i kartica */
+    text-align: center;
+    outline: none;
+}
+/* Lista proizvoda - Centrirana */
+#product-list {
+    display: flex;
+    justify-content: center; /* Centrira kartice u redu */
+    gap: 30px;               /* Razmak između kartica */
+    flex-wrap: wrap;         /* KLJUČNA LINIJA: omogućava karticama da pređu u novi red */
+    width: 90%;              /* Širina kontejnera */
+    margin: 0 auto;          /* Centrira ceo kontejner na sredini ekrana */
+    padding: 20px;
+}
+
+/* Kartice (Card) - doterivanje za kožnu pozadinu */
+.card {
+    width: 300px;            /* Fiksna širina kartice */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Malo jača senka da bi se istakle na braon pozadini */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #1a1a1a;
+}
+
+.card p {
+    color: #777;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card button {
+    width: 80%;
+    margin: 15px auto;
+    padding: 10px;
+    border: 1px solid #4b3621;
+    background: transparent;
+    color: #4b3621;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #4b3621;
+    color: white;
+}
+
+/* CONTACT FORM - Suptilnije ivice */
+form input, form textarea {
+    width: 300px;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 0; /* Minimalizam */
+}
